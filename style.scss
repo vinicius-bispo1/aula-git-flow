@@ -1,0 +1,80 @@
+// Variáveis
+$bg: #0b0f13;
+$card: #0f1620;
+$muted: #98a0aa;
+$accent: #00e1ff; // nova cor LED
+$glass: rgba(255, 255, 255, 0.03);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+}
+
+body {
+  background: radial-gradient(
+      1200px 600px at 10% 10%,
+      rgba(0, 225, 255, 0.06),
+      transparent
+    ),
+    radial-gradient(
+      1000px 500px at 90% 90%,
+      rgba(0, 225, 255, 0.03),
+      transparent
+    ),
+    $bg;
+  color: #e6eef6;
+  display: grid;
+  place-items: center;
+  padding: 32px;
+}
+
+.card {
+  width: 50%;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  backdrop-filter: blur(8px) saturate(120%);
+
+  .avatar {
+    width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+
+  .input-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    #nameInput {
+      margin-top: 2%;
+      background-color: #0b0f13;
+      color: #fff;
+      padding: 2%;
+      border-radius: 1vw;
+      font-size: 1.5vw;
+      border: solid 1px #fff;
+      outline: none;
+    }
+  }
+}
